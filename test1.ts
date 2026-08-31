@@ -107,3 +107,56 @@ obj={
 }
 
 console.log(obj);
+
+
+
+//interface it is mainly use by object only and user u should be capital letter
+
+interface User{
+    username:string,
+    email:string,
+    password:string,
+    isLogged:boolean
+
+
+
+};
+
+
+let obj2:User = {
+    username:"god",
+    email:"god@gmail.com",
+    password:"61548vv",
+    isLogged:true
+};
+
+
+
+type x={
+    num1:number
+}
+type y={
+    num2:number
+}
+// combine the two type 
+type xy= x&y;
+
+// extends  
+
+
+interface Like extends User{
+    totalLike:number
+};
+
+
+let objLike:Like = {
+    username:"kira",
+    email:"kirad@gmail.com",
+    password:"61eeed8vv",
+    isLogged:false,
+    totalLike:10
+
+}
+
+
+console.log(objLike)
