@@ -160,3 +160,32 @@ let objLike:Like = {
 
 
 console.log(objLike)
+
+
+
+// generic  <T> ():T here this is the return type
+function hello<T>(a:T,b:T):T{
+    return (b);
+     
+
+}
+
+hello<number>(2,5);
+
+
+
+// global declearation  we do in the src/type.d.ts
+
+declare global {
+    interface Window {
+        appVersion:string
+    }
+    type ApiResponse<T> = {
+        data:T,
+        error?:string
+    };
+
+}
+
+export {};
+
