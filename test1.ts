@@ -196,3 +196,20 @@ onClick: () => void;
 };
 const Button: React.FC<ButtonProps> = ({ label, onClick }) =>
 <button onClick={onClick}>{label}</button>;
+
+
+
+const [count,setCount] = useState<number>(0);
+const inputRef = useRef<HTMLInputElement>(null)
+
+
+// TO MAKE THE PROPS IN THE REACT USING TS
+
+type buttonProps={
+    data:string
+}
+
+// react componets
+function Button({data}:buttonProps){
+
+}
