@@ -213,3 +213,11 @@ type buttonProps={
 function Button({data}:buttonProps){
 
 }
+
+// another way to access it 
+type ButtonProps = {
+label: string;
+onClick: () => void;
+};
+const Button: React.FC<ButtonProps> = ({ label, onClick }) =>
+<button onClick={onClick}>{label}</button>;
