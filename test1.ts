@@ -221,3 +221,15 @@ onClick: () => void;
 };
 const Button: React.FC<ButtonProps> = ({ label, onClick }) =>
 <button onClick={onClick}>{label}</button>;
+
+
+// we do this also
+
+const Button = ({data}:buttonProps)=>{
+    return(
+        <div>
+        hello 
+        </div>
+    )
+
+}
