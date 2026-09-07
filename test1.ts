@@ -233,3 +233,19 @@ const Button = ({data}:buttonProps)=>{
     )
 
 }
+
+
+
+// if we use the event 
+// if we write simple is will show the error because type is not present 
+const handleSubmit = (e:React.FormEvent)=>{
+    e.preventDefault();
+
+}
+
+// making type in layout.tsx for the children
+type childrenType={
+    children : React. ReactNode
+
+}
+ 
