@@ -248,4 +248,5 @@ type childrenType={
     children : React. ReactNode
 
 }
- 
+// this we call the reactnode
+export default function RootLayout({children} : childrenType )
