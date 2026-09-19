@@ -309,3 +309,46 @@ const nextConfig: NextConfig = {
 }
  
 export default nextConfig
+
+
+//api writing using ts
+
+// api.ts
+
+type ApiResponse<T> = {
+  success: boolean;
+  data: T;
+  message?: string;
+};
+
+// Generic function
+function createResponse<T>(
+  data: T,
+  message?: string
+): ApiResponse<T> {
+  return {
+    success: true,
+    data,
+    message,
+  };
+}
+
+// User type
+type User = {
+  id: number;
+  name: string;
+  email: string;
+};
+
+// TypeScript automatically knows the type of data
+const userResponse = createResponse<User>(
+  {
+    id: 1,
+    name: "Raj",
+    email: "raj@example.com",
+  },
+  "User fetched successfully"
+);
+
+console.log(userResponse.data.name);
+console.log(userResponse.data.email);
